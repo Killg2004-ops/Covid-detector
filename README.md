@@ -79,13 +79,13 @@ python3 script/Svm_model_training.py
 
 Dans deux terminaux :
 ```bash
-python3 script/model_training.py
-python3 script/train_svm_mlp.py
+python3 script/Cnn_model_training.py
+python3 script/Svm_model_training.py
 ```
 Ou en arrière-plan :
 ```bash
-nohup python3 script/model_training.py > cnn.log 2>&1 &
-nohup python3 script/train_svm_mlp.py > svmmlp.log 2>&1 &
+nohup python3 script/Cnn_model_training.py > cnn.log 2>&1 &
+nohup python3 script/Svm_model_training.py > svm.log 2>&1 &
 ```
 
 ---
