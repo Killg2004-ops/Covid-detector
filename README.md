@@ -17,7 +17,7 @@ Ce projet propose une pipeline complète pour la classification automatique de r
 
 Deux approches sont comparées :
 - **CNN** (Convolutional Neural Network) avec TensorFlow/Keras
-- **SVM** (Support Vector Machine) et **MLP** (Multi Layer Perceptron) avec scikit-learn
+- **SVM** (Support Vector Machine) avec scikit-learn
 
 ---
 
@@ -28,12 +28,11 @@ covid_detector/
 │
 ├── data/                # Dossier contenant les images classées par dossier (covid, pneumonia, normal)
 ├── script/
-│   ├── model_training.py      # Entraînement et évaluation du CNN
-│   └── train_svm_mlp.py       # Entraînement et évaluation SVM/MLP
+│   ├── Cnn_model_training.py      # Entraînement et évaluation du CNN
+│   └── Svm_model_training.py       # Entraînement et évaluation SVM
 ├── eda_covid19_bn.png   # Visualisation EDA (pie chart, radios exemples)
 ├── resultat2.png        # Résultats CNN (courbes, matrice de confusion)
-├── svm_mlp_confusion.png# Résultats SVM/MLP (matrices de confusion)
-└── covid19_bn_cnn_final.pkl   # Modèle CNN sauvegardé
+└── covid19_bn_cnn_final.pkl   # Modèle CNN sauvegardé (50 epochs)
 ```
 
 ---
@@ -65,16 +64,16 @@ covid_detector/
 ### 1. Entraînement CNN
 
 ```bash
-python3 script/model_training.py
+python3 script/Cnn_model_training.py (mac)
 ```
 - Génère les courbes d'apprentissage, matrices de confusion, et sauvegarde le modèle.
 
-### 2. Entraînement SVM/MLP
+### 2. Entraînement SVM
 
 ```bash
-python3 script/train_svm_mlp.py
+python3 script/Svm_model_training.py
 ```
-- Génère les matrices de confusion et sauvegarde les modèles SVM/MLP.
+- Génère les matrices de confusion et sauvegarde le modèle SVM.
 
 ### 3. Exécution simultanée (optionnel)
 
